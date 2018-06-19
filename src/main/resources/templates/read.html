@@ -2,13 +2,29 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Jokes MVC CRUD App</title>
+		<title>Denzel Jokes</title>
 	</head>
 	<body>
-		
-		{{#jokes}}
-			{{joke}} - {{punchline}} - {{rating}} <br/>
+		<h1>New Joke</h1>
+		<table>	
+			<tr>
+			<th>joke</th>
+			
+			<th>punchline</th>
+			
+			<th>rating</th>
+			</tr>
+			
+	{{#jokes}}
+	<tr>
+		<td> {{joke}}</td>
+		<td>{{#punchline}}{{punchline}}{{/punchline}}</td>
+		<td>{{rating}}</td>
+		</tr>
 		{{/jokes}}
-		
+			</table>
+			
+			<hr>
+			<a href="/add">Want to add a new joke?</a>
 	</body>
 </html>
